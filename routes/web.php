@@ -17,5 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/user/test/{name?}', function($name = null) {
-    return 'Hola ' . $name . ' esto es una ruta de priueba';
+    return 'Hola ' . $name . ' esto es una ruta de prueba';
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
