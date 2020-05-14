@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/user/test/{name?}', function($name = null) {
+    return 'Hola ' . $name . ' esto es una ruta de priueba';
+});
